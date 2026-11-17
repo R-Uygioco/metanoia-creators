@@ -1,0 +1,140 @@
+.films-page {
+  padding-bottom: clamp(5rem, 10vw, 9rem);
+}
+
+.films-page__content {
+  padding-top: 2rem;
+}
+
+.film-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 5vw, 4rem) 1.5rem;
+}
+
+.film-card {
+  min-width: 0;
+}
+
+.film-card__link {
+  display: block;
+}
+
+.film-card__poster {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  max-height: 34rem;
+  object-fit: cover;
+  margin-bottom: 1.25rem;
+  transition: border-color var(--transition-standard);
+}
+
+.film-card__link:hover .film-card__poster {
+  border-color: var(--color-text);
+}
+
+.film-card__status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.film-card__details h2 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.75rem, 3.5vw, 3rem);
+}
+
+.film-card__details > p {
+  max-width: 42rem;
+  margin-bottom: 0;
+}
+
+.film-status {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-muted);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.film-detail__status {
+  margin-bottom: 1rem;
+}
+
+.film-detail__poster {
+  aspect-ratio: 2 / 3;
+  min-height: 20rem;
+  object-fit: cover;
+}
+
+.film-detail__logline {
+  color: var(--color-text);
+  font-size: clamp(1.15rem, 2.4vw, 1.6rem);
+}
+
+.film-detail__video {
+  aspect-ratio: 16 / 9;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.film-detail__video span {
+  max-width: 30rem;
+}
+
+.film-timeline {
+  position: relative;
+  display: grid;
+  gap: 2rem;
+  margin: 0;
+  padding: 0 0 0 1.5rem;
+  list-style: none;
+}
+
+.film-timeline::before {
+  position: absolute;
+  top: 0.2rem;
+  bottom: 0.2rem;
+  left: 0;
+  width: 1px;
+  background: var(--color-border-strong);
+  content: '';
+}
+
+.film-timeline__entry {
+  position: relative;
+}
+
+.film-timeline__entry::before {
+  position: absolute;
+  top: 0.3rem;
+  left: -1.78rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border: 1px solid var(--color-text);
+  background: var(--color-background);
+  content: '';
+}
+
+.film-timeline__entry h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.film-timeline__entry p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .film-grid {
+    grid-template-columns: 1fr;
+  }
+}

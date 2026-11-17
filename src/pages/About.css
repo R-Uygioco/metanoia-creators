@@ -1,0 +1,202 @@
+.about-introduction,
+.about-practice {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.7fr) minmax(0, 1.3fr);
+  gap: 2rem;
+}
+
+.about-introduction h2,
+.about-practice h2,
+.about-philosophy h2,
+.about-team h2 {
+  max-width: 46rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-introduction p:last-child,
+.about-practice__content > p:last-child,
+.about-philosophy__inner > div:nth-child(2) > p:last-child {
+  max-width: 42rem;
+  margin-bottom: 0;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+}
+
+.about-introduction strong,
+.about-practice strong,
+.about-philosophy strong {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.about-philosophy,
+.about-team {
+  background: var(--color-background-alt);
+}
+
+.about-philosophy__inner {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.7fr) minmax(0, 1.3fr);
+  gap: 2rem;
+}
+
+.about-image-placeholder {
+  display: flex;
+  min-height: 16rem;
+  align-items: flex-end;
+  padding: 1.25rem;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-background);
+}
+
+.about-image-placeholder span {
+  color: var(--color-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about-philosophy__inner > .about-image-placeholder {
+  min-height: clamp(18rem, 38vw, 32rem);
+  grid-column: 2;
+}
+
+.about-behind-scenes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  grid-column: 2;
+}
+
+.about-behind-scenes .about-image-placeholder {
+  width: 100%;
+  min-height: 0;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.about-mission {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.about-mission > div {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border-strong);
+}
+
+.about-mission > div > p:last-child {
+  margin-bottom: 0;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+}
+
+.about-services {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.7fr) minmax(0, 1.3fr);
+  gap: 2rem;
+}
+
+.about-services__content > h2 {
+  max-width: 46rem;
+  margin-bottom: 2rem;
+}
+
+.about-service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 1.25rem;
+}
+
+.about-service-card {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border-strong);
+}
+
+.about-service-card h3,
+.about-team-card h3 {
+  margin-block: 1.25rem 0.75rem;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+}
+
+.about-service-card p,
+.about-team-card > p:last-of-type {
+  margin-bottom: 0;
+}
+
+.about-service-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.about-team-card {
+  min-width: 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border-strong);
+}
+
+.about-team-card__photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.about-team-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-team-card__links a {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+}
+
+.about-team-card__links a:hover {
+  color: var(--color-text);
+}
+
+@media (max-width: 700px) {
+  .about-introduction,
+  .about-practice,
+  .about-philosophy__inner,
+  .about-services {
+    grid-template-columns: 1fr;
+  }
+
+  .about-philosophy__inner > .about-image-placeholder {
+    grid-column: 1;
+  }
+
+  .about-behind-scenes {
+    grid-column: 1;
+  }
+
+  .about-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .about-service-grid,
+  .about-team-grid,
+  .about-mission {
+    grid-template-columns: 1fr;
+  }
+
+  .about-behind-scenes {
+    grid-template-columns: 1fr;
+  }
+}

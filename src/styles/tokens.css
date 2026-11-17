@@ -1,0 +1,21 @@
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  background: #080808;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-background: #080808;
+  --color-background-alt: #191919;
+  --color-text: #fff;
+  --color-muted: #b8b8b8;
+  --color-border: #2a2a2a;
+  --color-border-strong: #4a4a4a;
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Bebas Neue', Impact, sans-serif;
+  --container-width: 1280px;
+  --page-gutter: clamp(1.25rem, 5vw, 5rem);
+  --transition-standard: 180ms ease;
+}

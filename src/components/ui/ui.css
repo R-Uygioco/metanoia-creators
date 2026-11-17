@@ -1,0 +1,118 @@
+.button {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--color-text);
+  border-radius: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  transition:
+    color var(--transition-standard),
+    background-color var(--transition-standard);
+  cursor: pointer;
+}
+
+.button--solid {
+  background: var(--color-text);
+  color: var(--color-background);
+}
+
+.button--solid:hover {
+  background: transparent;
+  color: var(--color-text);
+}
+
+.button--outline {
+  background: transparent;
+  color: var(--color-text);
+}
+
+.button--outline:hover {
+  background: var(--color-text);
+  color: var(--color-background);
+}
+
+.section-heading {
+  max-width: 52rem;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+.section-heading__eyebrow {
+  margin-bottom: 1rem;
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.page-header {
+  padding-top: clamp(4rem, 10vw, 8rem);
+}
+
+.page-header h1 {
+  margin-bottom: 1.25rem;
+}
+
+.page-header__description {
+  max-width: 42rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.placeholder-page {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.placeholder-page h1 {
+  margin-bottom: 1rem;
+}
+
+.loader,
+.state-message {
+  padding-block: 3rem;
+  color: var(--color-muted);
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.loader__mark {
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 1px solid var(--color-muted);
+  border-top-color: var(--color-text);
+  border-radius: 50%;
+  animation: loader-spin 800ms linear infinite;
+}
+
+.state-message h2 {
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.state-message .button {
+  margin-top: 0.75rem;
+}
+
+@keyframes loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
