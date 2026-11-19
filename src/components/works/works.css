@@ -111,7 +111,7 @@
   padding-top: 2rem;
 }
 
-.detail-page__hero .media-placeholder {
+.detail-page__hero .media-placeholder:not(.film-detail__poster) {
   aspect-ratio: 16 / 10;
   object-fit: cover;
 }
